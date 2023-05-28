@@ -15,7 +15,7 @@ const HomeLayout: FC = () => {
         {/* Hero Text */}
         <div className="flex flex-col justify-center items-start h-full">
           {/* Nike collection intro name */}
-          <div className="-space-y-4">
+          <div className="-space-y-4 mt-20">
             <p className="text-9xl special-color font-bold font-indie-flower italic">
               NIKE
             </p>

@@ -12,4 +12,16 @@
   a .special-color:hover {
     @apply transition-all duration-100;
   }
+
+  html::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  html::-webkit-scrollbar-track {
+    @apply bg-white;
+  }
+
+  html::-webkit-scrollbar-thumb {
+    @apply bg-gradient-to-b text-transparent from-primary-2 to-primary-1 rounded-sm;
+  }
 }
