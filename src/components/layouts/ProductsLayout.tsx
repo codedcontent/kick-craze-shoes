@@ -4,7 +4,7 @@ import ProductCard from "../pages/products/ProductCard";
 
 const ProductsLayout: FC = () => {
   return (
-    <section className="w-full min-h-screen">
+    <section className="w-full min-h-screen" id="product">
       <div className="container pt-16 mx-auto px-4">
         <p className="text-6xl font-bold special-color uppercase text-center">
           Products

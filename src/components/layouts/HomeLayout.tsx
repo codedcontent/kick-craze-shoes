@@ -5,7 +5,7 @@ import { AiOutlineDoubleRight } from "react-icons/ai";
 
 const HomeLayout: FC = () => {
   return (
-    <section className="h-screen w-full">
+    <section className="h-screen w-full" id="home">
       <div
         className="container mx-auto h-full bg-cover relative"
         style={{
