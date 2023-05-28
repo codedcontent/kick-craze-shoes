@@ -1,6 +1,8 @@
 import { FC } from "react";
 import { type KickCrazeShoesProps } from "../../../constants/products";
 import CustomRating from "../../common/CustomRating";
+import { BsFillBalloonHeartFill } from "react-icons/bs";
+import { RiShareForwardFill } from "react-icons/ri";
 
 const ProductCard: FC<KickCrazeShoesProps> = ({
   name,
@@ -10,10 +12,12 @@ const ProductCard: FC<KickCrazeShoesProps> = ({
   rating,
 }) => {
   return (
-    <div className="w-full p-4 rounded-md shadow-md shadow-primary-2 flex justify-center items-center flex-col space-y-6">
+    <div className="w-full p-4 rounded-md shadow-md shadow-primary-2 flex justify-center items-center flex-col space-y-6 relative group overflow-hidden">
+      {/* Shoe image */}
       <img src={image} alt={name} className="h-36 w-36" />
 
-      <div className="space-y-2">
+      {/* Shoe details */}
+      <div className="space-y-2 flex justify-center items-center flex-col">
         <p className="text-xl font-bold uppercase text-center">{name}</p>
 
         <p className="font-light text-sm text-gray-400 text-center">
@@ -23,6 +27,23 @@ const ProductCard: FC<KickCrazeShoesProps> = ({
         <p className="text-lg font-bold uppercase text-center">$ {price}</p>
 
         <CustomRating rating={rating} />
+
+        <button className="bg-gradient-to-r from-primary-1 to-primary-2 px-8 py-2 text-white focus-within:scale-95">
+          Add to Cart
+        </button>
+      </div>
+
+      {/* Like & share button */}
+      <div className="flex flex-col absolute top-0 -left-5 group-hover:left-5 gap-2 opacity-0 transition-all duration-300 group-hover:opacity-100">
+        {/* Like */}
+        <div className="p-2 border rounded-md border-gray-400">
+          <BsFillBalloonHeartFill className="text-2xl" />
+        </div>
+
+        {/* Share */}
+        <div className="p-2 border rounded-md border-gray-400">
+          <RiShareForwardFill className="text-2xl" />
+        </div>
       </div>
     </div>
   );

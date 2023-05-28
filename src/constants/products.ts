@@ -21,7 +21,7 @@ export const kickCrazeShoes: KickCrazeShoesProps[] = [
     description:
       "Experience ultimate comfort and style with the Nike Air Max 270. It features a breathable mesh upper and a responsive Air Max unit in the heel.",
     price: 149.99,
-    rating: 4.5,
+    rating: 4,
   },
   {
     image: shoe2,
@@ -29,7 +29,7 @@ export const kickCrazeShoes: KickCrazeShoesProps[] = [
     description:
       "Get ready to fly with the Nike Zoom Pegasus 38. These running shoes provide excellent cushioning and support for your daily runs.",
     price: 129.99,
-    rating: 4.8,
+    rating: 5,
   },
   {
     image: shoe3,
@@ -37,7 +37,7 @@ export const kickCrazeShoes: KickCrazeShoesProps[] = [
     description:
       "Stay motivated and injury-free with the Nike React Infinity Run. Its responsive cushioning and stability features make it perfect for long-distance runs.",
     price: 159.99,
-    rating: 4.7,
+    rating: 4,
   },
   {
     image: shoe4,
@@ -45,7 +45,7 @@ export const kickCrazeShoes: KickCrazeShoesProps[] = [
     description:
       "Step up your sneaker game with the iconic Nike Air Force 1. It offers timeless style and unbeatable comfort for everyday wear.",
     price: 109.99,
-    rating: 4.6,
+    rating: 3,
   },
   {
     image: shoe5,
@@ -53,7 +53,7 @@ export const kickCrazeShoes: KickCrazeShoesProps[] = [
     description:
       "Experience a new level of comfort with the Nike Joyride Run Flyknit. Its innovative cushioning system adapts to your every step, providing a smooth ride.",
     price: 179.99,
-    rating: 4.4,
+    rating: 4,
   },
   {
     image: shoe6,
@@ -61,7 +61,7 @@ export const kickCrazeShoes: KickCrazeShoesProps[] = [
     description:
       "Enjoy the freedom of movement with the Nike Free RN 5.0. These lightweight running shoes offer a barefoot-like feel while still providing support.",
     price: 89.99,
-    rating: 4.3,
+    rating: 2,
   },
   {
     image: shoe7,
@@ -69,6 +69,6 @@ export const kickCrazeShoes: KickCrazeShoesProps[] = [
     description:
       "Stay stable and comfortable during your runs with the Nike Air Zoom Structure 23. Its supportive design and responsive cushioning deliver a smooth stride.",
     price: 139.99,
-    rating: 4.9,
+    rating: 5,
   },
 ];

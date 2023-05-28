@@ -37,7 +37,7 @@ const HomeLayout: FC = () => {
               <span className="text-white uppercase">Shop now</span>
 
               <div className="relative grid place-items-center">
-                <AiOutlineDoubleRight className="text-white text-lg transition-all fixed group-hover:transform group-hover:translate-x-2 duration-200" />
+                <AiOutlineDoubleRight className="text-white text-lg transition-all absolute group-hover:transform group-hover:translate-x-2 duration-200" />
               </div>
             </button>
           </div>
