@@ -1,16 +1,40 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import redShoe1 from "../../assets/images/red_shoes1.png";
 import redShoe2 from "../../assets/images/red_shoes2.png";
 import redShoe3 from "../../assets/images/red_shoes3.png";
 import redShoe4 from "../../assets/images/red_shoes4.png";
 import ShoeAngleDisplay from "../pages/about/ShoeAngleDisplay";
 
-const AboutLayout: FC = () => {
-  const [selectedImage, setSelectedImage] = useState<string>(redShoe1);
+type SelectedImageProps = {
+  image: string;
+  id: number;
+};
 
-  const handleShoeClick = (newImage: string): void => {
-    setSelectedImage(newImage);
+const AboutLayout: FC = () => {
+  const [currentDisplayIndex, setCurrentDisplayIndex] = useState(0);
+
+  const shoesToDisplay = [redShoe1, redShoe2, redShoe3, redShoe4];
+
+  const handleShoeClick = (id: number): void => {
+    setCurrentDisplayIndex(id);
   };
+
+  // Make the show display change every 5 seconds
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      if (currentDisplayIndex <= shoesToDisplay.length - 1) {
+        setCurrentDisplayIndex((prev) => prev + 1);
+      } else {
+        setCurrentDisplayIndex(0);
+      }
+    }, 5000);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
+  useEffect(() => {
+    console.log(currentDisplayIndex, shoesToDisplay.length - 1);
+  }, [currentDisplayIndex, shoesToDisplay.length]);
 
   return (
     <section className="w-full h-screen" id="about">
@@ -24,27 +48,23 @@ const AboutLayout: FC = () => {
           <div className="flex w-1/2 gap-6 h-max">
             {/* List of shoe angle displays that can vbe selected */}
             <div className="flex flex-col gap-y-2 justify-center">
-              <ShoeAngleDisplay
-                image={redShoe1}
-                handleClick={handleShoeClick}
-              />
-              <ShoeAngleDisplay
-                image={redShoe2}
-                handleClick={handleShoeClick}
-              />
-              <ShoeAngleDisplay
-                image={redShoe3}
-                handleClick={handleShoeClick}
-              />
-              <ShoeAngleDisplay
-                image={redShoe4}
-                handleClick={handleShoeClick}
-              />
+              {shoesToDisplay.map((image, index) => (
+                <ShoeAngleDisplay
+                  key={index}
+                  id={index}
+                  image={image}
+                  handleClick={handleShoeClick}
+                />
+              ))}
             </div>
 
             {/* Single shoe display */}
             <div className="flex w-full h-[400px] shadow-lg border-2 shadow-primary-2 rounded-xl justify-center items-center">
-              <img src={selectedImage} alt="A shoe" className="w-[80%]" />
+              <img
+                src={shoesToDisplay[currentDisplayIndex]}
+                alt="A shoe"
+                className="w-[80%]"
+              />
             </div>
           </div>
 
