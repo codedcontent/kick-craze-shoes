@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,5 +7,9 @@
 @layer components {
   .special-color {
     @apply bg-gradient-to-r text-transparent from-primary-1 to-primary-2 bg-clip-text;
+  }
+
+  a .special-color:hover {
+    @apply transition-all duration-100;
   }
 }

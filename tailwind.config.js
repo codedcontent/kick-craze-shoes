@@ -7,6 +7,9 @@ export default {
         "primary-1": "#c72092",
         "primary-2": "#6c14d0",
       },
+      fontFamily: {
+        "indie-flower": ["Indie Flower"],
+      },
     },
   },
   plugins: [],
