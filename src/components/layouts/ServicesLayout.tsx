@@ -5,7 +5,7 @@ import ServiceCard from "../pages/services/ServiceCard";
 const ServicesLayout: FC = () => {
   return (
     <section className="w-full h-screen" id="services">
-      <div className="container mx-auto flex flex-col justify-center items-center h-full gap-y-10">
+      <div className="container mx-auto flex flex-col justify-center items-center h-full gap-y-10 px-6">
         <p className="text-6xl font-bold special-color uppercase text-center">
           Our services
         </p>

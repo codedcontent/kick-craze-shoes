@@ -16,19 +16,20 @@ const HomeLayout: FC = () => {
         <div className="flex flex-col justify-center items-start h-full">
           {/* Nike collection intro name */}
           <div className="-space-y-4 mt-20">
-            <p className="text-9xl special-color font-bold font-indie-flower italic">
-              NIKE
+            <p className="text-6xl special-color font-bold font-indie-flower italic">
+              StrideX
             </p>
             <p className="text-7xl special-color font-bold">Collection</p>
           </div>
 
           {/* Nike collection text */}
           <p className="mt-6 w-1/2 font-light text-lg">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-            accusamus totam, quo ipsa corrupti id, accusantium aliquam culpa
-            laboriosam adipisci asperiores. Voluptas rem esse nam, modi dicta
-            aut enim nemo! laboriosam adipisci asperiores. Voluptas rem esse
-            nam, modi dicta aut enim nemo!
+            Introducing the sensational "StrideX Collection" from KickCraze! Get
+            ready to elevate your footwear game to unimaginable heights with
+            this groundbreaking line of shoes that combines style, comfort, and
+            unrivaled performance. Step into a world of extraordinary innovation
+            as the StrideX Collection redefines what it means to walk, run, and
+            conquer every step of your journey.
           </p>
 
           {/* Shop now button */}
