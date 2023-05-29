@@ -3,6 +3,7 @@ import welcomeBackShoeBg from "../../assets/images/loging_bg.png";
 import loginShoes from "../../assets/images/logshoes.png";
 import { BsPersonFill } from "react-icons/bs";
 import { RiLockPasswordFill } from "react-icons/ri";
+import AuthProvider from "../pages/welcome-back/AuthProvider";
 
 const WelcomeBackLayout: FC = () => {
   return (
@@ -24,7 +25,7 @@ const WelcomeBackLayout: FC = () => {
           <div className="w-max">
             <p className="italic font-indie-flower text-5xl">Welcome Back</p>
 
-            <form className="mt-10 space-y-2" action="/">
+            <form className="mt-10 flex flex-col gap-y-2" action="/">
               {/* User name text field */}
               <div className="space-y-1">
                 <p className="font-medium">User Name</p>
@@ -53,16 +54,28 @@ const WelcomeBackLayout: FC = () => {
                 </div>
               </div>
 
-              <a href="#" className="text-right text-sm">
+              {/* Forgot password link */}
+              <a href="#" className="text-right text-sm hover:underline">
                 Forget password?
               </a>
 
+              {/* Submit button */}
               <button
                 type="submit"
                 className="py-3 w-full text-white uppercase bg-gradient-to-r from-primary-1 to-primary-2 rounded-md transition-colors duration-150 hover:to-primary-1"
               >
                 Login
               </button>
+
+              {/* Auth providers */}
+              <div className="flex gap-4 justify-center items-center mt-4">
+                {/* Google */}
+                <AuthProvider providerType="google" />
+                {/* Facebook */}
+                <AuthProvider providerType="facebook" />
+                {/* Twitter */}
+                <AuthProvider providerType="twitter" />
+              </div>
             </form>
           </div>
         </div>
