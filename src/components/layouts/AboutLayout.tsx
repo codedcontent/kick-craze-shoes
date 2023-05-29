@@ -100,7 +100,7 @@ const AboutLayout: FC = () => {
               </p>
             </div>
 
-            <button className="py-3 w-full uppercase bg-gradient-to-r from-primary-1 to-primary-2 rounded-md transition-colors duration-1000 hover:to-primary-1">
+            <button className="py-3 w-full text-white uppercase bg-gradient-to-r from-primary-1 to-primary-2 rounded-md transition-colors duration-150 hover:to-primary-1">
               Shop now
             </button>
           </div>

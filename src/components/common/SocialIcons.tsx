@@ -2,23 +2,28 @@ import { FC } from "react";
 import { BsGithub, BsTwitter } from "react-icons/bs";
 import { RiInstagramFill } from "react-icons/ri";
 import { ImLinkedin2 } from "react-icons/im";
+import SocialIcon from "./SocialIcon";
 
 const SocialIcons: FC = () => {
-  const iconStyles = `text-lg hover:text-primary-1`;
-
   return (
     <div className="flex flex-col justify-center items-center gap-6 fixed right-[3%] top-1/2 transform -translate-y-1/2 z-50">
       {/* Twitter */}
-      <BsTwitter className={iconStyles} />
+      <SocialIcon icon={BsTwitter} link="https://twitter.com/i_am_meph" />
 
       {/* Instagram */}
-      <RiInstagramFill className={iconStyles} />
+      <SocialIcon
+        icon={RiInstagramFill}
+        link="https://www.instagram.com/tech_with_oge/"
+      />
 
       {/* LinkedIn */}
-      <ImLinkedin2 className={iconStyles} />
+      <SocialIcon
+        icon={ImLinkedin2}
+        link="https://www.linkedin.com/in/ogeme/"
+      />
 
       {/* GitHub */}
-      <BsGithub className={iconStyles} />
+      <SocialIcon icon={BsGithub} link="https://github.com/codedcontent" />
     </div>
   );
 };
