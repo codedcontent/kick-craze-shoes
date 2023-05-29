@@ -14,31 +14,31 @@ const Navbar: FC = () => {
         <div className="flex gap-x-10">
           <a
             href="#home"
-            className="hover:special-color hover:font-bold transition-all duration-100"
+            className="hover:special-color hover:font-bold transition-all duration-100 font-light"
           >
             Home
           </a>
           <a
             href="#product"
-            className="hover:special-color hover:font-bold "
+            className="hover:special-color hover:font-bold font-light"
           >
             Product
           </a>
           <a
             href="#about"
-            className="hover:special-color hover:font-bold transition-all duration-100"
+            className="hover:special-color hover:font-bold transition-all duration-100 font-light"
           >
             About
           </a>
           <a
             href="#review"
-            className="hover:special-color hover:font-bold transition-all duration-100"
+            className="hover:special-color hover:font-bold transition-all duration-100 font-light"
           >
             Review
           </a>
           <a
             href="#services"
-            className="hover:special-color hover:font-bold transition-all duration-100"
+            className="hover:special-color hover:font-bold transition-all duration-100 font-light"
           >
             Services
           </a>

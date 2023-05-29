@@ -3,6 +3,8 @@ import Navbar from "./components/layouts/Navbar";
 import About from "./pages/About";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
+import Review from "./pages/Review";
+import Services from "./pages/Services";
 
 const App = () => {
   return (
@@ -16,6 +18,10 @@ const App = () => {
       <Products />
 
       <About />
+
+      <Review />
+
+      <Services />
     </main>
   );
 };
