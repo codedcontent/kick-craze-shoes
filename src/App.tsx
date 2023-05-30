@@ -11,23 +11,23 @@ import WelcomeBack from "./pages/WelcomeBack";
 const App = () => {
   return (
     <main className="min-h-screen w-full bg-white relative pb-8">
-      <SocialIcons />
+      {/* <SocialIcons /> */}
 
       <Navbar />
 
       <Home />
 
-      <Products />
+      {/* <Products /> */}
 
-      <About />
+      {/* <About /> */}
 
-      <Review />
+      {/* <Review /> */}
 
-      <Services />
+      {/* <Services /> */}
 
-      <WelcomeBack />
+      {/* <WelcomeBack /> */}
 
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 };
