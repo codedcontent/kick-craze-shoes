@@ -1,6 +1,7 @@
+import { FC } from "react";
 import FooterLayout from "../components/layouts/FooterLayout";
 
-const Footer = () => {
+const Footer: FC = () => {
   return <FooterLayout />;
 };
 

@@ -15,7 +15,7 @@ const AuthProvider: FC<AuthProviderProps> = ({ providerType }) => {
       ? googleImg
       : twitterImg;
   return (
-    <div className="w-10 h-10 p-2 rounded-full bg-white cursor-pointer">
+    <div className="w-10 h-10 p-2 rounded-full bg-neutral-100 cursor-pointer">
       <img src={provider} alt={`${provider}-provider`} />
     </div>
   );

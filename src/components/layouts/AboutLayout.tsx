@@ -47,14 +47,14 @@ const AboutLayout: FC = () => {
 
   return (
     <section className="w-full min-h-screen" id="about">
-      <div className="container pt-16 mx-auto px-10 md:px-4 h-full">
-        <p className="text-4xl md:text-6xl font-bold special-color uppercase text-center">
+      <div className="container pt-16 mx-auto px-10 md:px-12 lg:px-4 h-full">
+        <p className="text-4xl lg:text-6xl font-bold special-color uppercase text-center">
           About Us
         </p>
 
-        <div className="flex flex-col md:flex-row justify-start items-center mt-6 md:mt-10 gap-10 md:gap-20">
+        <div className="flex flex-col lg:flex-row justify-start items-center mt-6 lg:mt-10 gap-10 lg:gap-20">
           {/* Shoe angle display */}
-          <div className="flex flex-col-reverse md:flex-row w-full md:w-1/2 gap-6 h-max">
+          <div className="flex flex-col-reverse md:flex-row w-full lg:w-1/2 gap-6 h-max">
             {/* List of shoe angle displays that can vbe selected */}
             <div className="flex md:flex-col gap-2 justify-center w-full md:w-max mt-2 md:mt-0">
               {shoesToDisplay.map((image, index) => (
@@ -77,8 +77,8 @@ const AboutLayout: FC = () => {
             </div>
           </div>
 
-          {/* Second half with about shoe text and shop now button */}
-          <div className="space-y-4 w-full md:w-1/2">
+          {/* Second half with info-text about shoe text and shop now button */}
+          <div className="space-y-4 w-full lg:w-1/2">
             {/* Text about the shoe */}
             <div className="shadow-sm border-1 w-full shadow-primary-1 rounded-xl p-4">
               <p className="font-light">
@@ -101,9 +101,11 @@ const AboutLayout: FC = () => {
               </p>
             </div>
 
-            <button className="py-3 w-full text-white uppercase bg-gradient-to-r from-primary-1 to-primary-2 rounded-md transition-colors duration-150 hover:to-primary-1">
-              Shop now
-            </button>
+            <form action="#products">
+              <button className="py-3 w-full text-white uppercase bg-gradient-to-r from-primary-1 to-primary-2 rounded-md transition-colors duration-150 hover:to-primary-1">
+                Shop now
+              </button>
+            </form>
           </div>
         </div>
       </div>

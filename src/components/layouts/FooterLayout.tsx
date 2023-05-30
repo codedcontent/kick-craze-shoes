@@ -3,20 +3,21 @@ import { BsGithub, BsTwitter } from "react-icons/bs";
 import { RiInstagramFill } from "react-icons/ri";
 import { ImLinkedin2 } from "react-icons/im";
 import SocialIcon from "../common/SocialIcon";
+import { FC } from "react";
 
-const FooterLayout = () => {
+const FooterLayout: FC = () => {
   return (
     <div className="w-full bg-neutral-100">
-      <div className="container mx-auto py-10 px-10 md:px-4">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-4 md:gap-6">
+      <div className="container mx-auto py-10 px-10 md:px-12 lg:px-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
           {/* Get help */}
-          <div className="flex gap-0 md:gap-6 flex-col w-full">
-            <p className="font-bold text-2xl md:text-3xl capitalize special-color">
+          <div className="flex gap-0 md:gap-3 lg:gap-6 flex-col w-full">
+            <p className="font-bold text-2xl lg:text-3xl capitalize special-color">
               Get Help
             </p>
 
             {/* Get help links */}
-            <div className="flex md:block space-x-3 md:space-x-0 md:space-y-2 text-sm md:text-base">
+            <div className="flex md:block space-x-3 md:space-x-0 md:space-y-2 text-sm lg:text-base">
               <a
                 href="#"
                 className="hover:special-color flex gap-x-2 justify-start items-center font-light w-max"
@@ -47,13 +48,14 @@ const FooterLayout = () => {
             </div>
           </div>
 
-          <div className="flex gap-0 md:gap-6 flex-col w-full">
-            <p className="font-bold text-2xl md:text-3xl capitalize special-color">
+          {/* Our stores */}
+          <div className="flex gap-0 md:gap-3 lg:gap-6 flex-col w-full">
+            <p className="font-bold text-2xl lg:text-3xl capitalize special-color">
               Our stores
             </p>
 
             {/* Stores links */}
-            <div className="flex md:block space-x-3 md:space-x-0 md:space-y-2 text-sm md:text-base">
+            <div className="flex md:block space-x-3 md:space-x-0 md:space-y-2 text-sm lg:text-base">
               <a
                 href="#"
                 className="hover:special-color flex gap-x-2 justify-start items-center font-light"
@@ -85,8 +87,8 @@ const FooterLayout = () => {
           </div>
 
           {/* Follow us */}
-          <div className="flex gap-0 md:gap-6 flex-col w-full">
-            <p className="font-bold text-2xl md:text-3xl capitalize special-color">
+          <div className="flex gap-0 md:gap-3 lg:gap-6 flex-col w-full">
+            <p className="font-bold text-2xl lg:text-3xl capitalize special-color">
               Follow Us
             </p>
 
@@ -118,8 +120,8 @@ const FooterLayout = () => {
           </div>
 
           {/* Contact */}
-          <div className="flex gap-0 md:gap-6 flex-col w-full">
-            <p className="font-bold text-2xl md:text-3xl capitalize special-color">
+          <div className="flex gap-0 md:gap-3 lg:gap-6 flex-col w-full">
+            <p className="font-bold text-2xl lg:text-3xl capitalize special-color">
               Contact
             </p>
 
@@ -158,8 +160,8 @@ const FooterLayout = () => {
           </div>
 
           {/* Newsletter */}
-          <div className="flex gap-0 md:gap-6 flex-col w-full">
-            <p className="font-bold text-2xl md:text-3xl capitalize special-color">
+          <div className="flex gap-0 md:gap-3 lg:gap-6 flex-col w-full">
+            <p className="font-bold text-2xl lg:text-3xl capitalize special-color">
               Newsletter
             </p>
 

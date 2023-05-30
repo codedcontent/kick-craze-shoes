@@ -7,7 +7,7 @@ const HomeLayout: FC = () => {
   return (
     <section className="h-screen w-full" id="home">
       <div
-        className="container mx-auto h-full bg-cover relative px-10 md:px-0"
+        className="container mx-auto h-full bg-cover relative px-10 md:px-12 lg:px-0"
         style={{
           backgroundImage: `url(${bg1})`,
         }}
@@ -25,7 +25,7 @@ const HomeLayout: FC = () => {
           </div>
 
           {/* Nike collection text */}
-          <p className="mt-1 md:mt-6 w-full md:w-1/2 font-light md:text-lg">
+          <p className="mt-1 md:mt-6 w-full md:w-3/4 lg:w-1/2 font-light md:text-lg">
             Introducing the sensational "StrideX Collection" from KickCraze! Get
             ready to elevate your footwear game to unimaginable heights with
             this groundbreaking line of shoes that combines style, comfort, and
@@ -37,7 +37,7 @@ const HomeLayout: FC = () => {
           {/* Shop now button */}
           <form
             action="#products"
-            className="w-full md:w-max mt-8 md:mt-20 flex justify-center items-center"
+            className="w-full md:w-max mt-8 lg:mt-20 flex justify-center items-center"
           >
             <button className="transition-all flex bg-gradient-to-r from-primary-1 to-primary-2 pl-6 w-40 py-2.5 rounded-full justify-start items-center gap-4 hover:bg-gradient-to-b hover:from-primary-2 hover:to-primary-1 group btn">
               <span className="text-white uppercase">Shop now</span>
@@ -52,7 +52,7 @@ const HomeLayout: FC = () => {
           <img
             src={bgShoes}
             alt="KICK-CRAZE SHOE"
-            className="absolute right-[4%] h-[80%] hidden md:inline-block"
+            className="absolute right-[4%] h-[80%] hidden lg:inline-block"
           />
         </div>
       </div>

@@ -28,7 +28,7 @@ const ProductCard: FC<KickCrazeShoesProps> = ({
 
         <CustomRating rating={rating} />
 
-        <button className="bg-gradient-to-r from-primary-1 to-primary-2 px-8 py-2 text-white focus-within:scale-95 w-full lg:w-max">
+        <button className="bg-gradient-to-r from-primary-1 to-primary-2 px-8 py-2 text-white focus-within:scale-95 w-full md:w-max">
           Add to Cart
         </button>
       </div>

@@ -16,7 +16,7 @@ const Navbar: FC = () => {
   ];
 
   return (
-    <div className="w-full h-14 shadow-md flex justify-center items-center z-50 fixed top-0 left-0 bg-white px-6">
+    <div className="w-full h-14 shadow-md flex justify-center items-center z-50 fixed top-0 left-0 bg-white px-6 md:px-12 lg:px-0">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
 
@@ -25,7 +25,7 @@ const Navbar: FC = () => {
         </a>
 
         {/* Nav links - large screen */}
-        <div className="hidden md:flex w-full items-center">
+        <div className="hidden lg:flex w-full items-center">
           <div className="flex gap-x-10 flex-1 w-full justify-center items-center">
             {navLinks.map(({ href, title }, index) => (
               <a
@@ -48,7 +48,7 @@ const Navbar: FC = () => {
         </div>
 
         {/* Hamburger menu */}
-        <div className="flex flex-col md:hidden">
+        <div className="flex flex-col lg:hidden">
           {!menuOpen && (
             <RxHamburgerMenu
               className="text-xl cursor-pointer"

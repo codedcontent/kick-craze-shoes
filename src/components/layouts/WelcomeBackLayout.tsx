@@ -8,26 +8,28 @@ import AuthProvider from "../pages/welcome-back/AuthProvider";
 const WelcomeBackLayout: FC = () => {
   return (
     <section
-      className="w-full h-screen bg-cover"
+      className="w-full min-h-screen bg-cover flex justify-center items-center"
       id="services"
       style={{
         backgroundImage: `url(${welcomeBackShoeBg})`,
       }}
     >
-      <div className="container mx-auto flex flex-col md:flex-row justify-center items-center h-full pt-16 px-10 md:px-4">
+      <div className="container mx-auto flex flex-col md:flex-row justify-center items-center h-full px-10 md:px-12 lg:px-4">
         {/* Shoe hero image */}
         <div className="w-full md:w-1/2 h-full flex justify-center items-center">
           <img
             src={loginShoes}
             alt="show-bg"
-            className="h-48 md:h-full md:w-full"
+            className="h-48 md:h-72 lg:h-full  lg:w-full"
           />
         </div>
 
         {/* Login form */}
-        <div className="w-full md:w-1/2 h-full flex justify-center items-center mt-6 md:mt-0">
+        <div className="w-full md:w-1/2 h-full flex justify-center items-center mt-6 lg:mt-0">
           <div className="w-full md:w-max">
-            <p className="italic font-indie-flower text-5xl">Welcome Back</p>
+            <p className="italic font-indie-flower text-5xl text-center">
+              Welcome Back
+            </p>
 
             <form className="mt-4 md:mt-10 flex flex-col gap-y-2" action="/">
               {/* User name text field */}
