@@ -57,24 +57,26 @@ const Navbar: FC = () => {
           )}
 
           {menuOpen && (
-            <div className="h-screen absolute w-[65%] right-0 top-0 backdrop-blur-xl bg-special animate__animated animate__flip">
-              <IoMdClose
-                className="absolute top-5 right-5 text-white z-50 text-xl cursor-pointer"
-                onClick={() => setMenuOpen(false)}
-              />
+            <div className="w-full h-screen absolute right-0 top-0 bg-neutral-50/50">
+              <div className="h-screen absolute w-[65%] right-0 top-0 backdrop-blur-xl bg-special animate__animated animate__flip">
+                <IoMdClose
+                  className="absolute top-5 right-5 text-white z-50 text-xl cursor-pointer"
+                  onClick={() => setMenuOpen(false)}
+                />
 
-              {/* Nav links */}
-              <div className="flex flex-col h-full w-full justify-center items-center gap-y-6">
-                {navLinks.map(({ href, title }, index) => (
-                  <a
-                    key={index}
-                    href={href}
-                    onClick={() => setMenuOpen(false)}
-                    className="hover:font-bold transition-all duration-100 font-light capitalize text-white"
-                  >
-                    {title}
-                  </a>
-                ))}
+                {/* Nav links */}
+                <div className="flex flex-col h-full w-full justify-center items-center gap-y-6">
+                  {navLinks.map(({ href, title }, index) => (
+                    <a
+                      key={index}
+                      href={href}
+                      onClick={() => setMenuOpen(false)}
+                      className="hover:font-bold transition-all duration-100 font-light capitalize text-white"
+                    >
+                      {title}
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
           )}

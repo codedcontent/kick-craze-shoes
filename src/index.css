@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 
+:root {
+  --animate-duration: 500ms;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -31,5 +35,22 @@
   }
 }
 
-.animate__animated.animate__bounce {
+@keyframes click-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.btn {
+  animation: none;
+}
+
+.btn:focus {
+  animation: click-animation 0.3s ease-in-out;
 }

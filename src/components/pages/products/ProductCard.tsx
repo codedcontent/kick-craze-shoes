@@ -28,7 +28,7 @@ const ProductCard: FC<KickCrazeShoesProps> = ({
 
         <CustomRating rating={rating} />
 
-        <button className="bg-gradient-to-r from-primary-1 to-primary-2 px-8 py-2 text-white focus-within:scale-95">
+        <button className="bg-gradient-to-r from-primary-1 to-primary-2 px-8 py-2 text-white focus-within:scale-95 w-full lg:w-max">
           Add to Cart
         </button>
       </div>
@@ -36,12 +36,12 @@ const ProductCard: FC<KickCrazeShoesProps> = ({
       {/* Like & share button */}
       <div className="flex flex-col absolute top-0 -left-5 group-hover:left-5 gap-2 opacity-0 transition-all duration-300 group-hover:opacity-100">
         {/* Like */}
-        <div className="p-2 border rounded-md border-gray-400">
+        <div className="p-2 border rounded-md border-gray-400 cursor-pointer">
           <BsFillBalloonHeartFill className="text-2xl" />
         </div>
 
         {/* Share */}
-        <div className="p-2 border rounded-md border-gray-400">
+        <div className="p-2 border rounded-md border-gray-400 cursor-pointer">
           <RiShareForwardFill className="text-2xl" />
         </div>
       </div>

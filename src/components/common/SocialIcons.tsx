@@ -6,7 +6,7 @@ import SocialIcon from "./SocialIcon";
 
 const SocialIcons: FC = () => {
   return (
-    <div className="flex flex-col justify-center items-center gap-6 fixed right-[3%] top-1/2 transform -translate-y-1/2 z-50">
+    <div className="hidden md:flex flex-col justify-center items-center gap-6 fixed right-[3%] top-1/2 transform -translate-y-1/2 z-50">
       {/* Twitter */}
       <SocialIcon icon={BsTwitter} link="https://twitter.com/i_am_meph" />
 

@@ -47,8 +47,8 @@ const AboutLayout: FC = () => {
 
   return (
     <section className="w-full h-screen" id="about">
-      <div className="container pt-16 mx-auto px-4 h-full">
-        <p className="text-6xl font-bold special-color uppercase text-center">
+      <div className="container mt-8 lg:pt-16 mx-auto px-4 h-full">
+        <p className="text-4xl md:text-6xl font-bold special-color uppercase text-center">
           About Us
         </p>
 

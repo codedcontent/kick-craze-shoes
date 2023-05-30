@@ -10,16 +10,16 @@ import WelcomeBack from "./pages/WelcomeBack";
 
 const App = () => {
   return (
-    <main className="min-h-screen w-full bg-white relative pb-8">
-      {/* <SocialIcons /> */}
+    <main className="min-h-screen w-full bg-white relative pb-0 md:pb-8">
+      <SocialIcons />
 
       <Navbar />
 
       <Home />
 
-      {/* <Products /> */}
+      <Products />
 
-      {/* <About /> */}
+      <About />
 
       {/* <Review /> */}
 
