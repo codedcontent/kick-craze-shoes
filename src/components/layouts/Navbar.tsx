@@ -1,8 +1,13 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import { AiFillHeart } from "react-icons/ai";
 import { BsFillCartCheckFill, BsPersonFill } from "react-icons/bs";
 
 const Navbar: FC = () => {
+  const [iconClicked, setIconClicked] = useState([
+    { id: 1, clicked: false },
+    { id: 2, clicked: false },
+    { id: 3, clicked: false },
+  ]);
   return (
     <div className="w-full h-14 shadow-md flex justify-center items-center z-50 fixed top-0 left-0 bg-white">
       <div className="container mx-auto flex justify-between items-center">
@@ -46,9 +51,9 @@ const Navbar: FC = () => {
 
         {/* Nav buttons */}
         <div className="flex gap-x-4">
-          <AiFillHeart className="text-2xl" />
-          <BsFillCartCheckFill className="text-2xl" />
-          <BsPersonFill className="text-2xl" />
+          <AiFillHeart className="hover:animate-shake-x text-2xl" />
+          <BsFillCartCheckFill className="text-2xl hover:animate-shake-x" />
+          <BsPersonFill className="text-2xl hover:animate-shake-x" />
         </div>
       </div>
     </div>

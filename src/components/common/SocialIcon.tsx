@@ -8,7 +8,7 @@ type SocialIconProps = {
 const SocialIcon: FC<SocialIconProps> = ({ icon, link }) => {
   return (
     <a
-      className="text-lg hover:text-primary-1 cursor-pointer"
+      className="text-lg hover:text-primary-1 cursor-pointer hover:animate-shake-y"
       href={link}
       target="_blank"
     >
