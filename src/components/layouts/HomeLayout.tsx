@@ -7,7 +7,7 @@ const HomeLayout: FC = () => {
   return (
     <section className="h-screen w-full" id="home">
       <div
-        className="container mx-auto h-full bg-cover relative px-4 md:px-0"
+        className="container mx-auto h-full bg-cover relative px-10 md:px-0"
         style={{
           backgroundImage: `url(${bg1})`,
         }}

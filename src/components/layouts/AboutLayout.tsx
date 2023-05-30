@@ -46,17 +46,17 @@ const AboutLayout: FC = () => {
   }, [currentDisplayIndex, shoesToDisplay.length]);
 
   return (
-    <section className="w-full h-screen" id="about">
-      <div className="container mt-8 lg:pt-16 mx-auto px-4 h-full">
+    <section className="w-full min-h-screen" id="about">
+      <div className="container pt-16 mx-auto px-10 md:px-4 h-full">
         <p className="text-4xl md:text-6xl font-bold special-color uppercase text-center">
           About Us
         </p>
 
-        <div className="flex justify-start items-center mt-10 gap-20">
+        <div className="flex flex-col md:flex-row justify-start items-center mt-6 md:mt-10 gap-10 md:gap-20">
           {/* Shoe angle display */}
-          <div className="flex w-1/2 gap-6 h-max">
+          <div className="flex flex-col-reverse md:flex-row w-full md:w-1/2 gap-6 h-max">
             {/* List of shoe angle displays that can vbe selected */}
-            <div className="flex flex-col gap-y-2 justify-center">
+            <div className="flex md:flex-col gap-2 justify-center w-full md:w-max mt-2 md:mt-0">
               {shoesToDisplay.map((image, index) => (
                 <ShoeAngleDisplay
                   key={index}
@@ -68,7 +68,7 @@ const AboutLayout: FC = () => {
             </div>
 
             {/* Single shoe display */}
-            <div className="flex w-full h-[400px] shadow-lg border-2 shadow-primary-2 rounded-xl justify-center items-center">
+            <div className="flex w-full h-[300px] md:h-[400px] shadow-lg border-2 shadow-primary-2 rounded-xl justify-center items-center">
               <img
                 src={shoesToDisplay[currentDisplayIndex]}
                 alt="A shoe"
@@ -77,7 +77,8 @@ const AboutLayout: FC = () => {
             </div>
           </div>
 
-          <div className="space-y-4 w-1/2">
+          {/* Second half with about shoe text and shop now button */}
+          <div className="space-y-4 w-full md:w-1/2">
             {/* Text about the shoe */}
             <div className="shadow-sm border-1 w-full shadow-primary-1 rounded-xl p-4">
               <p className="font-light">

@@ -10,11 +10,11 @@ const ReviewCard: FC<CustomerReview> = ({ image, name, rating, review }) => {
         <img
           src={image}
           alt="name"
-          className="h-20 w-20 rounded-full shadow-md"
+          className="h-14 md:h-20 w-14 md:w-20 rounded-full shadow-md"
         />
 
         <div className="space-y-1">
-          <p className="font-bold text-lg">{name}</p>
+          <p className="font-bold md:text-lg">{name}</p>
 
           <CustomRating rating={rating} />
         </div>

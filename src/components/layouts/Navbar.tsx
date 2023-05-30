@@ -16,7 +16,7 @@ const Navbar: FC = () => {
   ];
 
   return (
-    <div className="w-full h-14 shadow-md flex justify-center items-center z-50 fixed top-0 left-0 bg-white px-4">
+    <div className="w-full h-14 shadow-md flex justify-center items-center z-50 fixed top-0 left-0 bg-white px-6">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
 

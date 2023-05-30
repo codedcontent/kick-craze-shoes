@@ -7,7 +7,7 @@ type CustomRatingProps = {
 
 const CustomRating: FC<CustomRatingProps> = ({ rating }) => {
   return (
-    <div className="flex gap-2 justify-center items-center">
+    <div className="flex gap-2 justify-center items-center text-xs md:text-base">
       {Array(5)
         .fill("")
         .map((_, index) => (

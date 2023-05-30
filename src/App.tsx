@@ -10,7 +10,7 @@ import WelcomeBack from "./pages/WelcomeBack";
 
 const App = () => {
   return (
-    <main className="min-h-screen w-full bg-white relative pb-0 md:pb-8">
+    <main className="min-h-screen w-full bg-white relative">
       <SocialIcons />
 
       <Navbar />
@@ -21,13 +21,13 @@ const App = () => {
 
       <About />
 
-      {/* <Review /> */}
+      <Review />
 
-      {/* <Services /> */}
+      <Services />
 
-      {/* <WelcomeBack /> */}
+      <WelcomeBack />
 
-      {/* <Footer /> */}
+      <Footer />
     </main>
   );
 };
