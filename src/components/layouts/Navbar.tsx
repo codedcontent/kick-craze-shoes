@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { AiFillHeart } from "react-icons/ai";
 import { BsFillCartCheckFill, BsPersonFill } from "react-icons/bs";
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -6,6 +6,17 @@ import { IoMdClose } from "react-icons/io";
 
 const Navbar: FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  // Prevent scroll when the user opens the nav
+  useEffect(() => {
+    if (menuOpen) {
+      // Prevent scroll
+      document.body.style.overflow = "hidden";
+    } else {
+      // Allow scroll
+      document.body.style.overflow = "scroll";
+    }
+  }, [menuOpen]);
 
   const navLinks = [
     { title: "home", href: "#" },
