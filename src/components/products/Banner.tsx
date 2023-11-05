@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import "./module.css";
 
 type TBannerProps = {
@@ -55,8 +55,12 @@ const ProductsBanner = () => {
       spaceBetween={0}
       slidesPerView={1}
       navigation={true}
-      modules={[Navigation]}
-      className="h-72"
+      modules={[Navigation, Autoplay]}
+      className="h-32 md:h-72"
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
     >
       {bannerArray.map((bannerInfo) => (
         <SwiperSlide key={bannerInfo.id}>
