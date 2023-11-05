@@ -1,5 +1,5 @@
 import SocialIcons from "./components/common/SocialIcons";
-import Navbar from "./components/layouts/Navbar";
+import Navbar from "./components/common/Navbar";
 import About from "./pages/About";
 import Footer from "./pages/Footer";
 import Home from "./pages/Home";
@@ -8,7 +8,7 @@ import Review from "./pages/Review";
 import Services from "./pages/Services";
 import WelcomeBack from "./pages/WelcomeBack";
 
-const App = () => {
+const LandingPage = () => {
   return (
     <main className="min-h-screen w-full bg-white relative">
       <SocialIcons />
@@ -32,4 +32,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default LandingPage;

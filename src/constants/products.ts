@@ -12,10 +12,12 @@ export type KickCrazeShoesProps = {
   description: string;
   price: number;
   rating: number;
+  id: number;
 };
 
 export const kickCrazeShoes: KickCrazeShoesProps[] = [
   {
+    id: 1,
     image: shoe1,
     name: "Nike Air Max 270",
     description:
@@ -24,6 +26,7 @@ export const kickCrazeShoes: KickCrazeShoesProps[] = [
     rating: 4,
   },
   {
+    id: 2,
     image: shoe2,
     name: "Nike Zoom Pegasus 38",
     description:
@@ -32,6 +35,7 @@ export const kickCrazeShoes: KickCrazeShoesProps[] = [
     rating: 5,
   },
   {
+    id: 3,
     image: shoe3,
     name: "Nike React Infinity Run",
     description:
@@ -40,6 +44,7 @@ export const kickCrazeShoes: KickCrazeShoesProps[] = [
     rating: 4,
   },
   {
+    id: 4,
     image: shoe4,
     name: "Nike Air Force 1",
     description:
@@ -48,6 +53,7 @@ export const kickCrazeShoes: KickCrazeShoesProps[] = [
     rating: 3,
   },
   {
+    id: 5,
     image: shoe5,
     name: "Nike Joyride Run Flyknit",
     description:
@@ -56,6 +62,7 @@ export const kickCrazeShoes: KickCrazeShoesProps[] = [
     rating: 4,
   },
   {
+    id: 6,
     image: shoe6,
     name: "Nike Free RN 5.0",
     description:
@@ -64,6 +71,7 @@ export const kickCrazeShoes: KickCrazeShoesProps[] = [
     rating: 2,
   },
   {
+    id: 7,
     image: shoe7,
     name: "Nike Air Zoom Structure 23",
     description:
