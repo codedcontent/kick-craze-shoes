@@ -12,7 +12,35 @@ type InitialStateType = {
 };
 
 const initialState: InitialStateType = {
-  cart: [],
+  // cart: [],
+  cart: [
+    {
+      id: 1,
+      image:
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/ca0fcd7b-6537-4736-8a23-38b6c7104c24/dunk-low-shoes-f5ThGW.png",
+      name: "Nike Zoom Pegasus 38",
+      description:
+        "Get ready to fly with the Nike Zoom Pegasus 38. These running shoes provide excellent cushioning and support for your daily runs.",
+      price: 129.99,
+      rating: 5,
+      likes: 0,
+      shareCount: 0,
+      quantity: 0,
+    },
+    {
+      id: 2,
+      image:
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/ca0fcd7b-6537-4736-8a23-38b6c7104c24/dunk-low-shoes-f5ThGW.png",
+      name: "Nike Zoom Pegasus 38",
+      description:
+        "Get ready to fly with the Nike Zoom Pegasus 38. These running shoes provide excellent cushioning and support for your daily runs.",
+      price: 129.99,
+      rating: 5,
+      likes: 0,
+      shareCount: 0,
+      quantity: 0,
+    },
+  ],
   error: "",
   status: "idle",
 };
