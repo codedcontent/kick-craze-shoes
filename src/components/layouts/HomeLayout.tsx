@@ -2,6 +2,7 @@ import { FC } from "react";
 import bg1 from "../../assets/images/bg1.png";
 import bgShoes from "../../assets/images/shoes.png";
 import { AiOutlineDoubleRight } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const HomeLayout: FC = () => {
   return (
@@ -35,8 +36,8 @@ const HomeLayout: FC = () => {
           </p>
 
           {/* Shop now button */}
-          <form
-            action="#products"
+          <Link
+            to="/products"
             className="w-full md:w-max mt-8 lg:mt-20 flex justify-center items-center"
           >
             <button className="transition-all flex bg-gradient-to-r from-primary-1 to-primary-2 pl-6 w-40 py-2.5 rounded-full justify-start items-center gap-4 hover:bg-gradient-to-b hover:from-primary-2 hover:to-primary-1 group btn">
@@ -46,7 +47,7 @@ const HomeLayout: FC = () => {
                 <AiOutlineDoubleRight className="text-white text-lg transition-all absolute group-hover:transform group-hover:translate-x-2 duration-200" />
               </div>
             </button>
-          </form>
+          </Link>
 
           {/* Show image */}
           <img

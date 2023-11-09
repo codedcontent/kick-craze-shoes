@@ -6,18 +6,24 @@ import CheckoutDialog from "./CheckoutDialog";
 const Cart = () => {
   const cart = useAppSelector(selectCart);
 
-  console.log(cart);
+  const itemsPrice = cart.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0
+  );
+
   return (
     <div className="my-6">
       {/* Into text */}
       <h1 className="text-2xl text-center font-medium">Your Shopping Cart</h1>
 
-      <div className="flex items-center">
+      <div className="flex items-start gap-16 ml-20 relative">
         {/* Cart items */}
         <CartItems />
 
         {/* Checkout dialog */}
-        <CheckoutDialog />
+        {/* <div className="relative"> */}
+        <CheckoutDialog itemsPrice={itemsPrice} />
+        {/* </div> */}
       </div>
 
       {/* Other suggestions */}

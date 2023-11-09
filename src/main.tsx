@@ -13,6 +13,7 @@ import Products from "./components/products/Products.tsx";
 import { Provider } from "react-redux";
 import { store } from "./state/store.ts";
 import CartLayout from "./components/cart/CartLayout.tsx";
+import FavsLayout from "./components/favs/FavsLayout.tsx";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "cart",
         element: <CartLayout />,
+      },
+      {
+        path: "favs",
+        element: <FavsLayout />,
       },
     ],
   },

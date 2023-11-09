@@ -1,5 +1,5 @@
 import { nanoid } from "@reduxjs/toolkit";
-import { MouseEvent, useRef } from "react";
+import { useRef } from "react";
 
 type Props = {
   title: string;

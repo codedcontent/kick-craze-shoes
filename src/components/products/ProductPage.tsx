@@ -6,6 +6,9 @@ import { kickCrazeShoes } from "../../constants/products";
 import CustomRating from "../common/CustomRating";
 import { BsFillBalloonHeartFill } from "react-icons/bs";
 import { RiShareForwardFill } from "react-icons/ri";
+import { useAppDispatch } from "../../state/hooks";
+import { addToCart } from "../../state/cart/cartSlice";
+import CustomButton from "../common/CustomButton";
 
 const shoes = kickCrazeShoes;
 
@@ -18,6 +21,25 @@ export const loader = async ({ params }: Record<string, any>) => {
 const ProductPage = () => {
   const productId: number = useLoaderData() as number;
   const product = shoes[productId];
+
+  const dispatch = useAppDispatch();
+
+  const handleClick = () => {
+    const { description, id, image, name, price, rating } = product;
+    dispatch(
+      addToCart({
+        description,
+        id,
+        image,
+        name,
+        price,
+        likes: 0,
+        quantity: 0,
+        rating,
+        shareCount: 0,
+      })
+    );
+  };
 
   return (
     <div>
@@ -60,9 +82,9 @@ const ProductPage = () => {
               </div>
             </div>
 
-            <button className="w-full bg-gradient-to-r from-primary-1 to-primary-2 px-8 py-4 text-white focus-within:scale-95 mt-5 md:mt-10 rounded-lg font-bold uppercase">
-              Add to Cart
-            </button>
+            <div className="mt-5 md:mt-10">
+              <CustomButton title="Add to Cart" handleClick={handleClick} />
+            </div>
           </div>
 
           <div className="flex flex-row md:flex-col justify-center items-center md:items-start gap-10 md:mb-10 mb-5 w-full md:w-max mt-5 md:mt-0">

@@ -5,7 +5,7 @@ import Footer from "../../pages/Footer";
 const MainAppLayout = () => {
   // useEffect(() => {}, []);
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen relative">
       <MainAppNavbar />
 
       <div className="px-6 md:px-12 pt-14">

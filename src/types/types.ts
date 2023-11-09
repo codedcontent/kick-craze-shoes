@@ -9,6 +9,8 @@ export type TProduct = {
   shareCount: number;
 };
 
+export type TFavs = Omit<TProduct, "shareCount" | "likes">;
+
 export type TCartItem = Pick<
   TProduct,
   | "description"
