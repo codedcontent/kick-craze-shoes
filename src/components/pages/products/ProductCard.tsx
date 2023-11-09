@@ -4,41 +4,65 @@ import CustomRating from "../../common/CustomRating";
 import { BsFillBalloonHeartFill } from "react-icons/bs";
 import { RiShareForwardFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
+import CustomButton from "../../common/CustomButton";
+import { useAppDispatch } from "../../../state/hooks";
+import { addToCart } from "../../../state/cart/cartSlice";
+import { TProduct } from "../../../types/types";
 
-const ProductCard: FC<KickCrazeShoesProps> = ({
+const ProductCard: FC<TProduct> = ({
   name,
   image,
   description,
   price,
   rating,
   id,
+  likes,
+  shareCount,
 }) => {
+  const dispatch = useAppDispatch();
+
+  const handleClick = () => {
+    dispatch(
+      addToCart({
+        description,
+        id,
+        image,
+        name,
+        price,
+        likes,
+        quantity: 0,
+        rating,
+        shareCount,
+      })
+    );
+  };
+
   return (
-    <div className="w-full p-4 rounded-md shadow-md shadow-primary-2 flex justify-center items-center flex-col space-y-6 relative group overflow-hidden cursor-pointer">
+    <div className="w-full p-4 rounded-md shadow-md shadow-primary-2 flex justify-center items-center flex-col space-y-6 relative group overflow-hidden">
       {/* Shoe image */}
-      <Link to={`/products/${id}`}>
-        <img src={image} alt={name} className="h-36 w-36 z-0" />
+      <Link to={`/products/${id}`} className="cursor-pointer">
+        <img src={image} alt={name} className="h-36 w-36" />
       </Link>
 
       {/* Shoe details */}
-      <Link
-        to={`/products/${id}`}
-        className="space-y-2 flex justify-center items-center flex-col"
-      >
-        <p className="text-xl font-bold uppercase text-center">{name}</p>
+      <div className="space-y-2 flex justify-center items-center flex-col">
+        <Link to={`/products/${id}`} className="space-y-2 cursor-pointer">
+          <p className="text-xl font-bold uppercase text-center">{name}</p>
 
-        <p className="font-light text-sm text-gray-400 text-center">
-          {description}
-        </p>
-
+          <p className="font-light text-sm text-gray-400 text-center">
+            {description}
+          </p>
+        </Link>
         <p className="text-lg font-bold uppercase text-center">$ {price}</p>
 
         <CustomRating rating={rating} />
 
-        <button className="bg-gradient-to-r from-primary-1 to-primary-2 px-8 py-2 text-white focus-within:scale-95 w-full md:w-max">
-          Add to Cart
-        </button>
-      </Link>
+        <CustomButton
+          title="Add to cart"
+          handleClick={handleClick}
+          full={false}
+        />
+      </div>
 
       {/* Like & share button */}
       <div className="flex flex-col absolute top-0 -left-5 group-hover:left-5 gap-2 opacity-0 transition-all duration-300 group-hover:opacity-100 z-10">

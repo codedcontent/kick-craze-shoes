@@ -3,6 +3,7 @@ import { AiFillHeart } from "react-icons/ai";
 import { BsFillCartCheckFill, BsPersonFill } from "react-icons/bs";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const MainAppNavbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -30,9 +31,15 @@ const MainAppNavbar = () => {
         <div className="hidden lg:flex w-max items-center">
           {/* Nav buttons */}
           <div className="flex gap-x-4">
-            <AiFillHeart className="hover:animate-shake-y hover:text-primary-1 cursor-pointer text-2xl" />
-            <BsFillCartCheckFill className="text-2xl hover:animate-shake-y hover:text-primary-1 cursor-pointer" />
-            <BsPersonFill className="text-2xl hover:animate-shake-y hover:text-primary-1 cursor-pointer" />
+            <Link to={"/favs"}>
+              <AiFillHeart className="hover:animate-shake-y hover:text-primary-1 cursor-pointer text-2xl" />
+            </Link>
+            <Link to={"/cart"}>
+              <BsFillCartCheckFill className="text-2xl hover:animate-shake-y hover:text-primary-1 cursor-pointer" />
+            </Link>
+            <Link to="/profile">
+              <BsPersonFill className="text-2xl hover:animate-shake-y hover:text-primary-1 cursor-pointer" />
+            </Link>
           </div>
         </div>
 

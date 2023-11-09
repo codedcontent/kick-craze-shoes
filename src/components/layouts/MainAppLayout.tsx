@@ -3,6 +3,7 @@ import MainAppNavbar from "../common/MainAppNavbar";
 import Footer from "../../pages/Footer";
 
 const MainAppLayout = () => {
+  // useEffect(() => {}, []);
   return (
     <main className="min-h-screen">
       <MainAppNavbar />

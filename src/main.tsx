@@ -10,6 +10,9 @@ import ProductPage, {
 import LandingPage from "./LandingPage.tsx";
 import MainAppLayout from "./components/layouts/MainAppLayout.tsx";
 import Products from "./components/products/Products.tsx";
+import { Provider } from "react-redux";
+import { store } from "./state/store.ts";
+import CartLayout from "./components/cart/CartLayout.tsx";
 
 const router = createBrowserRouter([
   {
@@ -29,12 +32,18 @@ const router = createBrowserRouter([
         element: <ProductPage />,
         loader: ProductParamsLoader,
       },
+      {
+        path: "cart",
+        element: <CartLayout />,
+      },
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 );
