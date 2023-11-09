@@ -3,11 +3,11 @@ import { PayloadAction, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 import { RootState } from "../store";
 
-type TStateErrors = "idle" | "loading" | "success" | "failed";
+type TStateStatus = "idle" | "loading" | "success" | "failed";
 
 type InitialStateType = {
   cart: TCartItem[];
-  status: TStateErrors;
+  status: TStateStatus;
   error: string;
 };
 
