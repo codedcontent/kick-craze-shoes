@@ -16,7 +16,9 @@ const EmptyFavs = () => {
         <div className="my-6 text-center">
           <p className="font-light">Discover the latest shoes</p>
 
-          <p className="font-light">Save them for later, when time is right!</p>
+          <p className="font-light">
+            Save them for later, when the time is right!
+          </p>
         </div>
 
         <CustomButton title="Discover more" handleClick={handleClick} />

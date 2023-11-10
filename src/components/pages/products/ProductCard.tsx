@@ -1,13 +1,13 @@
 import { FC } from "react";
-import { type KickCrazeShoesProps } from "../../../constants/products";
 import CustomRating from "../../common/CustomRating";
 import { BsFillBalloonHeartFill } from "react-icons/bs";
 import { RiShareForwardFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import CustomButton from "../../common/CustomButton";
-import { useAppDispatch } from "../../../state/hooks";
+import { useAppDispatch, useAppSelector } from "../../../state/hooks";
 import { addToCart } from "../../../state/cart/cartSlice";
 import { TProduct } from "../../../types/types";
+import { addFav, selectFavs } from "../../../state/favs/favsSlice";
 
 const ProductCard: FC<TProduct> = ({
   name,
@@ -16,9 +16,11 @@ const ProductCard: FC<TProduct> = ({
   price,
   rating,
   id,
-  likes,
-  shareCount,
 }) => {
+  const favsIdArray = useAppSelector(selectFavs).map((fav) => fav.id);
+
+  const isLiked = favsIdArray.includes(id);
+
   const dispatch = useAppDispatch();
 
   const handleClick = () => {
@@ -29,10 +31,20 @@ const ProductCard: FC<TProduct> = ({
         image,
         name,
         price,
-        likes,
         quantity: 0,
+      })
+    );
+  };
+
+  const favoriteItem = () => {
+    dispatch(
+      addFav({
+        description,
+        id,
+        image,
+        name,
+        price,
         rating,
-        shareCount,
       })
     );
   };
@@ -67,7 +79,12 @@ const ProductCard: FC<TProduct> = ({
       {/* Like & share button */}
       <div className="flex flex-col absolute top-0 -left-5 group-hover:left-5 gap-2 opacity-0 transition-all duration-300 group-hover:opacity-100 z-10">
         {/* Like */}
-        <div className="p-2 border rounded-md border-gray-400 cursor-pointer">
+        <div
+          className={`p-2 border rounded-md border-gray-400 cursor-pointer ${
+            isLiked ? "text-red-600" : "text-black"
+          }`}
+          onClick={favoriteItem}
+        >
           <BsFillBalloonHeartFill className="text-2xl" />
         </div>
 

@@ -17,7 +17,7 @@ const initialState: TInitialStateType = {
     {
       description: "this",
       id: 1,
-      image: "image",
+      image: "https://picsum.photos/500/300?random=1",
       name: "Fav 1",
       price: 700,
       rating: 5,

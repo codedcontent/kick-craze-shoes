@@ -13,12 +13,5 @@ export type TFavs = Omit<TProduct, "shareCount" | "likes">;
 
 export type TCartItem = Pick<
   TProduct,
-  | "description"
-  | "id"
-  | "image"
-  | "likes"
-  | "name"
-  | "price"
-  | "rating"
-  | "shareCount"
+  "description" | "id" | "image" | "name" | "price"
 > & { quantity: number };

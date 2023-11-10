@@ -37,7 +37,7 @@ const MainAppNavbar = () => {
             <Link to={"/cart"}>
               <BsFillCartCheckFill className="text-2xl hover:animate-shake-y hover:text-primary-1 cursor-pointer" />
             </Link>
-            <Link to="/profile">
+            <Link to="/account">
               <BsPersonFill className="text-2xl hover:animate-shake-y hover:text-primary-1 cursor-pointer" />
             </Link>
           </div>
