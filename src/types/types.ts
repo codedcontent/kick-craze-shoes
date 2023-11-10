@@ -15,3 +15,8 @@ export type TCartItem = Pick<
   TProduct,
   "description" | "id" | "image" | "name" | "price"
 > & { quantity: number };
+
+export type TLoginForm = {
+  email: string;
+  password: string;
+};

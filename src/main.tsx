@@ -14,6 +14,7 @@ import { Provider } from "react-redux";
 import { store } from "./state/store.ts";
 import CartLayout from "./components/cart/CartLayout.tsx";
 import FavsLayout from "./components/favs/FavsLayout.tsx";
+import AccountLayout from "./components/account/AccountLayout.tsx";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "favs",
         element: <FavsLayout />,
+      },
+      {
+        path: "account",
+        element: <AccountLayout />,
       },
     ],
   },
