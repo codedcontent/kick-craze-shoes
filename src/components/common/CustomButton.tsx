@@ -36,7 +36,7 @@ const CustomButton = ({
       key={`customButton-${uniqueButtonKey}`}
       className={`bg-gradient-to-r from-primary-1 to-primary-2 px-8 py-2 text-white ${
         full ? "w-full" : "w-max"
-      } rounded-sm uppercase`}
+      } rounded-md uppercase`}
       onClick={handleButtonClickAnimation}
       {...props}
     >

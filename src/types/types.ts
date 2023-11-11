@@ -26,5 +26,6 @@ export type TCreateAccountForm = TLoginForm & { name: string };
 export type TAccountOption = {
   name: string;
   description: string;
-  image: string;
+  image: React.ReactNode;
+  path: string;
 };

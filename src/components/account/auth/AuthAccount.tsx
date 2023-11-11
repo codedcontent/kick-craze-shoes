@@ -17,7 +17,9 @@ const AuthAccount = () => {
         {/* Tab Headers */}
         <div className="flex">
           <p
-            className="font-semibold w-full py-2 border-[1px] border-t-0 text-center hover:bg-primary-1 hover:text-white cursor-pointer rounded-tl-lg"
+            className={`font-semibold w-full py-2 border-[1px] border-t-0 text-center hover:bg-primary-1 hover:text-white cursor-pointer rounded-tl-lg ${
+              selectedTab === "login" ? "bg-white border-b-0" : "bg-gray-200"
+            }`}
             onClick={() => {
               handleTabClick("login");
             }}
@@ -25,7 +27,11 @@ const AuthAccount = () => {
             Login
           </p>
           <p
-            className="font-semibold w-full py-2 border-[1px] border-t-0 text-center hover:bg-primary-1 hover:text-white cursor-pointer rounded-tr-lg"
+            className={`font-semibold w-full py-2 border-[1px] border-t-0 text-center hover:bg-primary-1 hover:text-white cursor-pointer rounded-tr-lg ${
+              selectedTab == "create account"
+                ? "bg-white border-b-0"
+                : "bg-gray-200"
+            }`}
             onClick={() => {
               handleTabClick("create account");
             }}
