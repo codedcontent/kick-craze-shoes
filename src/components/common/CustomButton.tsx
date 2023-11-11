@@ -7,7 +7,12 @@ type Props = {
   handleClick?: () => void;
 };
 
-const CustomButton = ({ title, full = true, handleClick }: Props) => {
+const CustomButton = ({
+  title,
+  full = true,
+  handleClick,
+  ...props
+}: Props & React.ButtonHTMLAttributes<HTMLButtonElement>) => {
   const uniqueButtonKey = nanoid();
 
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -33,6 +38,7 @@ const CustomButton = ({ title, full = true, handleClick }: Props) => {
         full ? "w-full" : "w-max"
       } rounded-sm uppercase`}
       onClick={handleButtonClickAnimation}
+      {...props}
     >
       {title}
     </button>

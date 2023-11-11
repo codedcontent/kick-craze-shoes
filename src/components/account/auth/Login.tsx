@@ -2,20 +2,24 @@ import { Formik, Form } from "formik";
 import CustomTextField from "../../common/CustomTextField";
 import loginValidationSchema from "../../../schema/loginValidationSchema";
 import { TLoginForm } from "../../../types/types";
+import CustomButton from "../../common/CustomButton";
 
 const Login = () => {
   const loginFormInitialValue: TLoginForm = {
     email: "",
     password: "",
   };
+
+  const handleSubmit = (values: TLoginForm) => {
+    console.log(values);
+  };
+
   return (
-    <div className="w-full flex justify-center items-center">
+    <div className="w-full h-max py-10 flex justify-center items-center">
       <Formik
         initialValues={loginFormInitialValue}
         validationSchema={loginValidationSchema}
-        onSubmit={(values) => {
-          console.log(values);
-        }}
+        onSubmit={handleSubmit}
       >
         <Form className="w-[80%] flex flex-col justify-center items-center">
           <CustomTextField
@@ -23,6 +27,7 @@ const Login = () => {
             label="Email"
             placeholder="Enter your email"
           />
+
           <CustomTextField
             name="password"
             label="Password"
@@ -30,8 +35,7 @@ const Login = () => {
             type="password"
           />
 
-          {/* Other form fields go here */}
-          <button type="submit">Submit</button>
+          <CustomButton title="Submit" type="submit" />
         </Form>
       </Formik>
     </div>

@@ -16,7 +16,7 @@ const Cart = () => {
       {/* Into text */}
       <h1 className="text-2xl text-center font-medium">Your Shopping Cart</h1>
 
-      <div className="flex items-start gap-16 ml-20 relative">
+      <div className="flex items-start gap-16 relative">
         {/* Cart items */}
         <CartItems />
 

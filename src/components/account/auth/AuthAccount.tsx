@@ -13,7 +13,7 @@ const AuthAccount = () => {
   return (
     <div className="w-full flex justify-center items-center">
       {/* Tab Container */}
-      <div className="h-96 w-[500px] border-2 rounded-lg">
+      <div className="w-[400px] border-2 rounded-lg ring-2 ring-primary-2 ring-offset-4">
         {/* Tab Headers */}
         <div className="flex">
           <p

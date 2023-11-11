@@ -22,6 +22,7 @@ const CustomTextField = ({
           {label}
         </label>
       )}
+
       <Field name={name}>
         {({ field, meta }: FieldProps) => (
           <>
@@ -35,7 +36,7 @@ const CustomTextField = ({
                 meta.touched && meta.error
                   ? "border-red-500"
                   : "border-gray-300"
-              } rounded-md focus:outline-none focus:ring focus:border-blue-300 ${
+              } rounded-md focus:outline-none focus:ring focus:border-primary-2 focus:ring-primary-1 focus:ring-offset-2 ${
                 disabled ? "bg-gray-100" : ""
               }`}
               {...props}

@@ -20,3 +20,11 @@ export type TLoginForm = {
   email: string;
   password: string;
 };
+
+export type TCreateAccountForm = TLoginForm & { name: string };
+
+export type TAccountOption = {
+  name: string;
+  description: string;
+  image: string;
+};
